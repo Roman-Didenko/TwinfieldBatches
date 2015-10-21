@@ -1,3 +1,5 @@
+set startPath=%CD%
+
 cd c:/Source/Neo
 git -c diff.mnemonicprefix=false -c core.quotepath=false checkout master
 git -c diff.mnemonicprefix=false -c core.quotepath=false pull --no-commit --rebase origin master
@@ -64,7 +66,4 @@ git -c diff.mnemonicprefix=false -c core.quotepath=false pull --no-commit --reba
 if errorlevel 1 goto finish
 
 :finish
-cd c:/Source
-
-
-
+cd "%startPath%"

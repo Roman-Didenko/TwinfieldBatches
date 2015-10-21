@@ -1,3 +1,5 @@
+set startPath=%CD%
+
 cd c:/Source/LegacyService
 git -c diff.mnemonicprefix=false -c core.quotepath=false reset -q --hard HEAD --
 if errorlevel 1 goto finish
@@ -51,7 +53,7 @@ git -c diff.mnemonicprefix=false -c core.quotepath=false reset -q --hard HEAD --
 if errorlevel 1 goto finish
 
 :finish
-cd c:/Source
+cd "%startPath%"
 
 
 

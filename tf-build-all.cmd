@@ -1,3 +1,5 @@
+set startPath=%CD%
+
 cd c:\Source\Neo
 powershell -File Install-Packages.ps1
 call build.bat
@@ -38,4 +40,4 @@ if errorlevel 1 goto finish
 if errorlevel 1 goto finish
 
 :finish
-cd c:\Source
+cd "%startPath%"

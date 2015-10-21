@@ -1,3 +1,5 @@
+set startPath=%CD%
+
 cd c:\Source\Neo
 call Timeline.Rebuild.bat
 if errorlevel 1 goto finish
@@ -21,4 +23,4 @@ Output\VatProjection.Builder.Host\Twinfield.VatProjection.Builder.Host.exe --ini
 if errorlevel 1 goto finish
 
 :finish
-cd c:\Source
+cd "%startPath%"

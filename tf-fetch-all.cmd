@@ -1,3 +1,5 @@
+set startPath=%CD%
+
 cd c:/Source/LegacyService
 git -c diff.mnemonicprefix=false -c core.quotepath=false fetch --prune --tags origin
 if errorlevel 1 goto finish
@@ -51,4 +53,4 @@ git -c diff.mnemonicprefix=false -c core.quotepath=false fetch --prune --tags or
 if errorlevel 1 goto finish
 
 :finish
-cd c:/Source
+cd "%startPath%"
