@@ -1,0 +1,14 @@
+Neo
+Legacy
+TwinfieldUI
+LegacyService
+ProjectionServiceCore
+SalesProjectionService
+PortfolioProjectionService
+TenantManagementService
+VatProjectionService
+CompanyImportProjectionService
+CompanyImportProjectionService
+FixedAssetsReportingProjectionService
+Tools
+twf-taf
