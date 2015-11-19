@@ -8,7 +8,6 @@ PortfolioProjectionService
 TenantManagementService
 VatProjectionService
 CompanyImportProjectionService
-CompanyImportProjectionService
 FixedAssetsReportingProjectionService
 Tools
 twf-taf
