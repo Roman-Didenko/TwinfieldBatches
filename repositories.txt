@@ -1,3 +1,4 @@
+CqrsCore
 Neo
 Legacy
 TwinfieldUI
@@ -11,3 +12,4 @@ CompanyImportProjectionService
 FixedAssetsReportingProjectionService
 Tools
 twf-taf
+BlobStorage

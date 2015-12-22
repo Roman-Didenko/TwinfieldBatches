@@ -1,5 +1,9 @@
 set startPath=%CD%
 
+cd c:\Source\CqrsCore
+call build.bat
+if errorlevel 1 goto finish
+
 cd c:\Source\Neo
 powershell -File Install-Packages.ps1
 call build.bat
@@ -37,6 +41,9 @@ cd c:\Source\TenantManagementService
 rem powershell -File Install-Packages.ps1
 call build.bat
 if errorlevel 1 goto finish
+
+cd c:\Source\BlobStorage
+call build.bat
 if errorlevel 1 goto finish
 
 :finish
