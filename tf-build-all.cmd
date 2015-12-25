@@ -5,7 +5,7 @@ call build.bat
 if errorlevel 1 goto finish
 
 cd c:\Source\Neo
-powershell -File Install-Packages.ps1
+powershell -File Install-Packages.ps1 || goto finish
 call build.bat
 if errorlevel 1 goto finish
 
@@ -13,8 +13,8 @@ cd c:\Source\Legacy
 call build.bat
 if errorlevel 1 goto finish
 
-cd c:\Source\TwinfieldUI
-call Build.Debug.bat
+cd c:\Source\TwinfieldUI 
+call Build.bat || goto finish
 
 cd c:\Source\LegacyService
 call build.bat
@@ -29,12 +29,12 @@ call build.bat
 if errorlevel 1 goto finish
 
 cd c:\Source\VatProjectionService
-powershell -File Install-Packages.ps1
+powershell -File Install-Packages.ps1 || goto finish
 call build.bat
 if errorlevel 1 goto finish
 
 cd c:\Source\CompanyImportProjectionService
-rem call build.bat
+call build.bat
 if errorlevel 1 goto finish
 
 cd c:\Source\TenantManagementService
@@ -43,6 +43,10 @@ call build.bat
 if errorlevel 1 goto finish
 
 cd c:\Source\BlobStorage
+call build.bat
+if errorlevel 1 goto finish
+
+cd C:\Source\FixedAssetsReportingProjectionService\
 call build.bat
 if errorlevel 1 goto finish
 

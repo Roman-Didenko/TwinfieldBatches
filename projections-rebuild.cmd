@@ -22,5 +22,10 @@ rem call ProjectionStore.Rebuild.bat
 Output\VatProjection.Builder.Host\Twinfield.VatProjection.Builder.Host.exe --init
 if errorlevel 1 goto finish
 
+cd C:\Source\FixedAssetsReportingProjectionService\
+Output\FixedAssetsReportingProjection.Builder.Host\Twinfield.FixedAssetsReportingProjection.Builder.Host.exe --init
+if errorlevel 1 goto finish
+
+
 :finish
 cd "%startPath%"
