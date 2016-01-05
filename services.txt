@@ -1,5 +1,4 @@
 CqrsCore
-Neo
 Legacy
 TwinfieldUI
 LegacyService
@@ -7,9 +6,6 @@ ProjectionServiceCore
 SalesProjectionService
 PortfolioProjectionService
 TenantManagementService
-VatProjectionService
 CompanyImportProjectionService
 FixedAssetsProjectionService
-Tools
-twf-taf
 BlobStorage

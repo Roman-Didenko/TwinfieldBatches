@@ -1,54 +1,29 @@
 set startPath=%CD%
 
-cd c:\Source\CqrsCore
-call build.bat
-if errorlevel 1 goto finish
+call go-to-source.cmd
+set currentPath=%CD%
 
-cd c:\Source\Neo
+cd "%currentPath%\Neo"
 powershell -File Install-Packages.ps1 || goto finish
 call build.bat
 if errorlevel 1 goto finish
 
-cd c:\Source\Legacy
-call build.bat
-if errorlevel 1 goto finish
 
-cd c:\Source\TwinfieldUI 
-call Build.bat || goto finish
-
-cd c:\Source\LegacyService
-call build.bat
-if errorlevel 1 goto finish
-
-cd c:\Source\SalesProjectionService
-call build.bat
-if errorlevel 1 goto finish
-
-cd c:\Source\PortfolioProjectionService
-call build.bat
-if errorlevel 1 goto finish
-
-cd c:\Source\VatProjectionService
+cd "%currentPath%\VatProjectionService"
 powershell -File Install-Packages.ps1 || goto finish
 call build.bat
 if errorlevel 1 goto finish
 
-cd c:\Source\CompanyImportProjectionService
-call build.bat
-if errorlevel 1 goto finish
+for /F "tokens=*" %%A in (%startPath%\services.txt) do (
+  echo %%A
+  cd "%currentPath%\%%A"
+  
+  call build.bat
+  if errorlevel 1 goto finish
+)
 
-cd c:\Source\TenantManagementService
-rem powershell -File Install-Packages.ps1
-call build.bat
-if errorlevel 1 goto finish
-
-cd c:\Source\BlobStorage
-call build.bat
-if errorlevel 1 goto finish
-
-cd C:\Source\FixedAssetsReportingProjectionService\
-call build.bat
-if errorlevel 1 goto finish
+cd "%currentPath%\Tools\ServiceManager\Twinfield.Tools.ServiceManager"
+call msbuild Twinfield.Tools.ServiceManager.sln 
 
 :finish
 cd "%startPath%"

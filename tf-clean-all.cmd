@@ -1,10 +1,13 @@
 set startPath=%CD%
 
-cd c:\Source\Neo
+call go-to-source.cmd
+set currentPath=%CD%
+
+cd "%currentPath%\Neo"
 call Clean.bat
 if errorlevel 1 goto finish
 
-cd c:\Source\Legacy
+cd "%currentPath%\Legacy"
 call Clean.bat
 if errorlevel 1 goto finish
 
