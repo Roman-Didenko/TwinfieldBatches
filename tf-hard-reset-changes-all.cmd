@@ -5,6 +5,7 @@ for /F "tokens=*" %%A in (repositories.txt) do (
   echo %%A
   cd "%startPath%\..\%%A"
   
+  git add .
   git -c diff.mnemonicprefix=false -c core.quotepath=false reset -q --hard HEAD --
   if errorlevel 1 goto finish
 )
