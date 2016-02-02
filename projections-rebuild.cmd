@@ -31,6 +31,10 @@ cd "%currentPath%\FixedAssetsProjectionService"
 Output\FixedAssetsProjection.Builder.Host\Twinfield.FixedAssetsProjection.Builder.Host.exe --init
 if errorlevel 1 goto finish
 
+cd "%currentPath%\CompanyImportProjectionService"
+Output\CompanyImportProjection.Builder.Host\Twinfield.CompanyImportProjection.Builder.Host.exe --init
+if errorlevel 1 goto finish
+
 
 :finish
 cd "%startPath%"

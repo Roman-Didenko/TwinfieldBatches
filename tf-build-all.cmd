@@ -14,6 +14,9 @@ powershell -File Install-Packages.ps1 || goto finish
 call build.bat
 if errorlevel 1 goto finish
 
+cd "%currentPath%\TwinfieldUI\Build"
+powershell -File Install-Prerequisites.ps1  || goto finish
+
 for /F "tokens=*" %%A in (%startPath%\services.txt) do (
   echo %%A
   cd "%currentPath%\%%A"

@@ -2,6 +2,7 @@
 set startPath=%CD%
 
 for /F "tokens=*" %%A in (repositories.txt) do (
+  echo.
   echo %%A
   cd "%startPath%\..\%%A"
   
