@@ -5,13 +5,13 @@ set currentPath=%CD%
 
 cd "%currentPath%\Neo"
 powershell -File Install-Packages.ps1 || goto finish
-call build.bat
+call build.bat 2>&1
 if errorlevel 1 goto finish
 
 
 cd "%currentPath%\VatProjectionService"
 powershell -File Install-Packages.ps1 || goto finish
-call build.bat
+call build.bat 2>&1
 if errorlevel 1 goto finish
 
 cd "%currentPath%\TwinfieldUI\Build"
@@ -21,7 +21,7 @@ for /F "tokens=*" %%A in (%startPath%\services.txt) do (
   echo %%A
   cd "%currentPath%\%%A"
   
-  call build.bat
+  call build.bat 2>&1
   if errorlevel 1 goto finish
 )
 
