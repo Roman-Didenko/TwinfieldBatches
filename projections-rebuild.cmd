@@ -5,6 +5,10 @@ set startPath=%CD%
 call go-to-source.cmd
 set currentPath=%CD%
 
+cd "%currentPath%\CompaniesProjectionService"
+Output\CompaniesProjection.Builder.Host\Twinfield.CompaniesProjection.Builder.Host.exe --init
+if errorlevel 1 goto finish
+
 cd "%currentPath%\Neo"
 call Timeline.Rebuild.bat
 if errorlevel 1 goto finish

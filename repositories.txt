@@ -13,3 +13,5 @@ FixedAssetsProjectionService
 Tools
 twf-taf
 BlobStorage
+CompaniesProjectionService
+ServiceHealthCheck

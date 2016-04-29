@@ -34,10 +34,16 @@ call Workspace.Setup.bat || goto finish
 cd "%startPath%\..\VatProjectionService"
 call Install.bat || goto finish
 
+cd "%startPath%\..\CompaniesProjectionService"
+call Install.bat || goto finish
+
 cd "%startPath%\..\CompanyImportProjectionService"
 call Install.bat || goto finish
 
 cd "%startPath%\..\BlobStorage"
+call Install.bat || goto finish
+
+cd "%startPath%\..\ServiceHealthCheck"
 call Install.bat || goto finish
 
 :finish

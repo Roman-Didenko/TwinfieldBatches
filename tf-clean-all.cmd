@@ -11,5 +11,7 @@ cd "%currentPath%\Legacy"
 call Clean.bat
 if errorlevel 1 goto finish
 
+del "C:\Migrations\*"/F /Q 
+
 :finish
 cd "%startPath%"

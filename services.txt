@@ -9,3 +9,5 @@ TenantManagementService
 CompanyImportProjectionService
 FixedAssetsProjectionService
 BlobStorage
+CompaniesProjectionService
+ServiceHealthCheck
