@@ -3,11 +3,12 @@ Legacy
 TwinfieldUI
 LegacyService
 ProjectionServiceCore
-SalesProjectionService
-PortfolioProjectionService
 TenantManagementService
+BlobStorage
+ServiceHealthCheck
+CompaniesProjectionService
+TimelineProjectionService
+PurchaseProjectionService
 CompanyImportProjectionService
 FixedAssetsProjectionService
-BlobStorage
-CompaniesProjectionService
-ServiceHealthCheck
+SalesProjectionService

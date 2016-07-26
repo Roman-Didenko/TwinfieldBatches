@@ -1,3 +1,4 @@
+Basecone
 CqrsCore
 Neo
 Legacy
@@ -5,7 +6,6 @@ TwinfieldUI
 LegacyService
 ProjectionServiceCore
 SalesProjectionService
-PortfolioProjectionService
 TenantManagementService
 VatProjectionService
 CompanyImportProjectionService
@@ -15,3 +15,5 @@ twf-taf
 BlobStorage
 CompaniesProjectionService
 ServiceHealthCheck
+TimelineProjectionService
+PurchaseProjectionService

@@ -20,4 +20,4 @@ goto:eof
 @echo logs contains next errors:
 find "Error:" log.txt
 find ": error " log.txt
-find "Error" C:\Migrations\*
+if exist C:\Migrations (find "Error" C:\Migrations\*)

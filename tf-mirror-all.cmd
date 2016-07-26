@@ -4,10 +4,10 @@ set startPath=%CD%
 for /F "tokens=*" %%A in (repositories.txt) do (
   echo.
   echo %%A
-  cd "%startPath%\..\%%A"
   
-  git config core.autocrlf false
-  git -c diff.mnemonicprefix=false -c core.quotepath=false fetch --prune --tags origin 2>&1
+  cd "%startPath%\.."
+  
+  git clone --mirror git@github.com:Twinfield/%%A.git 2>&1
   if errorlevel 1 goto finish
 )
 
